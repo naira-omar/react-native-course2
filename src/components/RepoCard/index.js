@@ -4,9 +4,9 @@ import { limitTextLength } from "../../utils";
 import { InfoContainer } from "../InfoContainer";
 import styles from "./styles";
 
-function RepoCard({imageSrc,title,description,issuesNumber,starsNumber,providerName,numberOfLines,}) {
+function RepoCard({imageSrc,title,description,issuesNumber,starsNumber,providerName,numberOfLines,onPress}) {
   return (
-    <Pressable style={styles.container}>
+    <Pressable style={styles.container} onPress={onPress}>
       <View style={styles.contentContainer}>
         <Image source={{ uri: imageSrc }} style={styles.image} />
         <View style={styles.rightView}>
